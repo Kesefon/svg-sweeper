@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version="1.1" baseProfile="full">
+    <title>SVG-sweeper</title>
+    <desc>A minesweeper-clone implemented in a single SVG. No JavaScript!</desc>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid lightgray;
+            background-color: darkgray;
+        }
+        td {
+            border: 2px solid lightgray;
+            font-size: large;
+        }
+        label {
+            width: 2em;
+            height: 2em;
+            display: inline-block;
+            text-align: center;
+        }
+        label:after {
+            content: '☐';
+            color: darkgray
+        }
+        input {
+            display: none;
+            pointer-events: none;
+        }
+        input:checked+label {
+            pointer-events: none;
+            background-color: lightgray;
+            color: black;
+        }
+        input:checked+label:after {
+            color: black;
+        }
+        .f0:checked+label:after {
+            content: '☐';
+            color: lightgray
+        }
+        .f1:checked+label:after {
+            content: '1';
+        }
+        .f2:checked+label:after {
+            content: '2';
+        }
+        .f3:checked+label:after {
+            content: '3';
+        }
+        .f4:checked+label:after {
+            content: '4';
+        }
+        .f5:checked+label:after {
+            content: '5';
+        }
+        .f6:checked+label:after {
+            content: '6';
+        }
+        .f7:checked+label:after {
+            content: '7';
+        }
+        .f8:checked+label:after {
+            content: '8';
+        }
+        .fbomb:checked+label {
+            background-color: red;
+        }
+        .fbomb:checked+label:after {
+            content: '💣';
+        }
+    </style>
+
+    <foreignObject x="0" y="0" width="100%" height="100%">
+        <table xmlns="http://www.w3.org/1999/xhtml">
+            <tbody xmlns="http://www.w3.org/1999/xhtml">
+
+                <tr xmlns="http://www.w3.org/1999/xhtml">
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field0-0" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field0-0" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field0-1" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field0-1" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field0-2" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field0-2" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field0-3" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field0-3" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field0-4" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field0-4" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field0-5" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field0-5" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field0-6" class="fbomb" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field0-6" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field0-7" class="fbomb" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field0-7" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field0-8" class="f2" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field0-8" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field0-9" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field0-9" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                </tr>
+                <tr xmlns="http://www.w3.org/1999/xhtml">
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field1-0" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field1-0" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field1-1" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field1-1" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field1-2" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field1-2" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field1-3" class="f2" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field1-3" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field1-4" class="f2" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field1-4" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field1-5" class="f2" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field1-5" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field1-6" class="f3" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field1-6" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field1-7" class="fbomb" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field1-7" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field1-8" class="f2" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field1-8" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field1-9" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field1-9" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                </tr>
+                <tr xmlns="http://www.w3.org/1999/xhtml">
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field2-0" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field2-0" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field2-1" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field2-1" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field2-2" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field2-2" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field2-3" class="fbomb" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field2-3" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field2-4" class="fbomb" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field2-4" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field2-5" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field2-5" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field2-6" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field2-6" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field2-7" class="f2" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field2-7" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field2-8" class="f2" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field2-8" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field2-9" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field2-9" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                </tr>
+                <tr xmlns="http://www.w3.org/1999/xhtml">
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field3-0" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field3-0" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field3-1" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field3-1" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field3-2" class="f3" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field3-2" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field3-3" class="f4" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field3-3" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field3-4" class="f3" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field3-4" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field3-5" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field3-5" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field3-6" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field3-6" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field3-7" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field3-7" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field3-8" class="fbomb" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field3-8" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field3-9" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field3-9" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                </tr>
+                <tr xmlns="http://www.w3.org/1999/xhtml">
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field4-0" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field4-0" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field4-1" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field4-1" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field4-2" class="fbomb" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field4-2" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field4-3" class="fbomb" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field4-3" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field4-4" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field4-4" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field4-5" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field4-5" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field4-6" class="f0" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field4-6" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field4-7" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field4-7" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field4-8" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field4-8" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                    <td xmlns="http://www.w3.org/1999/xhtml">
+                        <input autocomplete="off" type="checkbox" id="field4-9" class="f1" xmlns="http://www.w3.org/1999/xhtml" />
+                        <label for="field4-9" xmlns="http://www.w3.org/1999/xhtml"></label>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+    <p xmlns="http://www.w3.org/1999/xhtml"> Mine count: 8</p>
+    </foreignObject>
+
+</svg>
+
